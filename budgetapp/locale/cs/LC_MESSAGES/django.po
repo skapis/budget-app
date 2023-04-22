@@ -1,0 +1,353 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-04-17 19:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: .\authentication\views.py:36
+msgid "Username should only contain alphanumeric characters"
+msgstr "Uživatelské jméno musí obsahovat pouze alfanumerické znaky"
+
+#: .\authentication\views.py:38
+msgid "Username is already taken"
+msgstr "Uživatel s tímto jménem již existuje"
+
+#: .\authentication\views.py:47
+msgid "Email is invalid"
+msgstr "E-mail není platný"
+
+#: .\authentication\views.py:49
+msgid "Email is already taken"
+msgstr "Uživatel s tímto e-mailem již existuje"
+
+#: .\authentication\views.py:70 .\authentication\views.py:228
+msgid "Password is too short"
+msgstr "Heslo je příliš krátké"
+
+#: .\authentication\views.py:92
+msgid "Activate your account"
+msgstr "Aktivujte svůj účet"
+
+#: .\authentication\views.py:101
+msgid "Account was created, we have sent you e-mail with activation link"
+msgstr ""
+"Učet byl vytvořen, odeslali jsme Vám e-mail s instrukcemi pro aktivaci účtu"
+
+#: .\authentication\views.py:120
+msgid "Account activated succesfully"
+msgstr "Účet byl úspěšně aktivován"
+
+#: .\authentication\views.py:143
+msgid "Account is not active, please check you email"
+msgstr "Účet není aktivní, zkontrolujte svůj e-mail"
+
+#: .\authentication\views.py:146
+msgid "The user does not exist, please check your credentials"
+msgstr "Uživatel s tímto jménem "
+
+#: .\authentication\views.py:149
+msgid "Please fill all fields"
+msgstr "Prosím vyplňte všechna povinná pole"
+
+#: .\authentication\views.py:156
+msgid "You have been successfully logout"
+msgstr "Byli jste úspěšně odhlášeni"
+
+#: .\authentication\views.py:171
+msgid "Please enter a valid email"
+msgstr "Zadaný e-mail není platný"
+
+#: .\authentication\views.py:187
+msgid "Password reset Instructions"
+msgstr "Obnovení hesla"
+
+#: .\authentication\views.py:202
+msgid "We have sent you an email to reset your password"
+msgstr "E-mail pro obnovení hesla byl odeslán"
+
+#: .\authentication\views.py:224
+msgid "Passwords do not match"
+msgstr "Zadaná hesla se neshodují"
+
+#: .\authentication\views.py:235
+msgid "Password link is invalid, please request a new one"
+msgstr "Platnost odkazu vypršela"
+
+#: .\authentication\views.py:240
+msgid "Password reset succesfully"
+msgstr "Heslo bylo úspěšně změněno"
+
+#: .\authentication\views.py:245
+msgid "Something went wrong"
+msgstr "Něco se pokazilo, zkuste to prosím znovu"
+
+#: .\budgetapp\settings.py:119
+msgid "English"
+msgstr "Angličtina"
+
+#: .\budgetapp\settings.py:120
+msgid "Czech"
+msgstr "Čeština"
+
+#: .\budgetapp\urls.py:7
+msgid "admin/"
+msgstr ""
+
+#: .\core\views.py:110
+msgid "Transaction was created"
+msgstr "Transakce byla úspěšně vytvořena"
+
+#: .\core\views.py:112 .\core\views.py:154
+msgid "Different transaction type than category type"
+msgstr "Nesouhlasí typ transakce s typem kategorie"
+
+#: .\core\views.py:114 .\core\views.py:156
+msgid "All required fields must be filled"
+msgstr "Vyplňte prosím všechna povinná pole"
+
+#: .\core\views.py:122
+msgid "Transaction was removed"
+msgstr "Transakce byla odstraněna"
+
+#: .\core\views.py:152
+msgid "Transaction was changed"
+msgstr "Změny byly uloženy"
+
+#: .\core\views.py:173
+msgid "Currency was changed"
+msgstr "Měna byla úspěšně změněna"
+
+#: .\templates\authentication\login.html:11
+msgid "Login to your account"
+msgstr "Přihlaste se"
+
+#: .\templates\authentication\login.html:17
+#: .\templates\authentication\register.html:17
+#: .\templates\budget\userWallet.html:13
+msgid "Username"
+msgstr "Uživatelské jméno"
+
+#: .\templates\authentication\login.html:21
+#: .\templates\authentication\register.html:29
+#: .\templates\authentication\set-new-password.html:17
+msgid "Password"
+msgstr "Heslo"
+
+#: .\templates\authentication\login.html:25
+#: .\templates\authentication\register.html:36
+msgid "Login"
+msgstr "Přihlásit se"
+
+#: .\templates\authentication\login.html:29
+msgid "Don't have an account?"
+msgstr "Ještě nemáte účet?"
+
+#: .\templates\authentication\login.html:29
+msgid "Sign up"
+msgstr "Založit nový účet"
+
+#: .\templates\authentication\login.html:30
+msgid "Forget Password?"
+msgstr "Zapomenuté heslo"
+
+#: .\templates\authentication\register.html:11
+msgid "Register for a free account"
+msgstr "Založte si nový účet"
+
+#: .\templates\authentication\register.html:33
+msgid "Register"
+msgstr "Registrovat"
+
+#: .\templates\authentication\register.html:36
+msgid "Already a user?"
+msgstr "Máte už účet?"
+
+#: .\templates\authentication\reset-password.html:11
+msgid "Please enter your email to get reset link"
+msgstr "Pro obnovení hesla zadejte svůj e-mail"
+
+#: .\templates\authentication\reset-password.html:20
+#: .\templates\authentication\set-new-password.html:25
+msgid "Submit"
+msgstr "Odeslat"
+
+#: .\templates\authentication\reset-password.html:23
+#: .\templates\authentication\set-new-password.html:28
+msgid "Back to Login"
+msgstr "Zpět na přihlášení"
+
+#: .\templates\authentication\set-new-password.html:11
+msgid "Set your new password"
+msgstr "Nastavení nového hesla"
+
+#: .\templates\authentication\set-new-password.html:21
+msgid "Confirm password"
+msgstr "Heslo znovu"
+
+#: .\templates\base_auth.html:17 .\templates\home.html:16
+#: .\templates\partials\navbar.html:10
+msgid "Budget App"
+msgstr "Rozpočet"
+
+#: .\templates\budget\dashboard.html:6 .\templates\partials\navbar.html:13
+msgid "Dashboard"
+msgstr "Přehled"
+
+#: .\templates\budget\dashboard.html:10 .\templates\budget\transactions.html:10
+msgid "Add Transaction"
+msgstr "Nová transakce"
+
+#: .\templates\budget\dashboard.html:25 .\templates\budget\transactions.html:25
+msgid "Show"
+msgstr "Zobrazit"
+
+#: .\templates\budget\dashboard.html:32
+msgid "Balance"
+msgstr "Zůstatek"
+
+#: .\templates\budget\dashboard.html:46 .\templates\budget\dashboard.html:91
+msgid "Incomes"
+msgstr "Příjmy"
+
+#: .\templates\budget\dashboard.html:60 .\templates\budget\dashboard.html:92
+msgid "Expenses"
+msgstr "Výdaje"
+
+#: .\templates\budget\dashboard.html:74 .\templates\budget\transactions.html:6
+#: .\templates\partials\navbar.html:16
+msgid "Transactions"
+msgstr "Transakce"
+
+#: .\templates\budget\dashboard.html:104
+msgid "Month"
+msgstr "Měsíc"
+
+#: .\templates\budget\dashboard.html:105
+msgid "Year"
+msgstr "Rok"
+
+#: .\templates\budget\dashboard.html:118
+#: .\templates\budget\transactionDetail.html:28
+#: .\templates\budget\transactions.html:32
+#: .\templates\modals\newTransaction.html:24
+msgid "Category"
+msgstr "Kategorie"
+
+#: .\templates\budget\dashboard.html:119
+#: .\templates\budget\transactionDetail.html:34
+#: .\templates\budget\transactions.html:33
+#: .\templates\modals\newTransaction.html:30
+msgid "Date"
+msgstr "Datum"
+
+#: .\templates\budget\dashboard.html:120
+#: .\templates\budget\transactionDetail.html:38
+#: .\templates\budget\transactions.html:34
+#: .\templates\modals\newTransaction.html:34
+msgid "Amount"
+msgstr "Částka"
+
+#: .\templates\budget\dashboard.html:145
+#: .\templates\budget\transactions.html:59
+msgid "You have no transactions in selected period"
+msgstr "V tomto období nemáte žádné transakce"
+
+#: .\templates\budget\transactionDetail.html:6
+msgid "Transaction detail"
+msgstr "Detail transakce"
+
+#: .\templates\budget\transactionDetail.html:42
+#: .\templates\modals\newTransaction.html:38
+msgid "Description"
+msgstr "Popis"
+
+#: .\templates\budget\transactionDetail.html:45
+msgid "Save Changes"
+msgstr "Uložit změny"
+
+#: .\templates\budget\userWallet.html:5
+msgid "User account"
+msgstr "Uživatelský účet"
+
+#: .\templates\budget\userWallet.html:31
+msgid "Account created"
+msgstr "Datum vytvoření účtu"
+
+#: .\templates\budget\userWallet.html:48
+msgid "Currency"
+msgstr "Měna"
+
+#: .\templates\budget\userWallet.html:60
+msgid "Save"
+msgstr "Uložit"
+
+#: .\templates\home.html:18 .\templates\home.html:34
+msgid "Sign In"
+msgstr "Přihlásit se"
+
+#: .\templates\home.html:19 .\templates\home.html:35
+msgid "Sign Up"
+msgstr "Založit nový účet"
+
+#: .\templates\home.html:26
+msgid "Welcome to the Budget App"
+msgstr "Vítejte v aplikaci Rozpočet"
+
+#: .\templates\home.html:27
+msgid ""
+"With BudgetApp you can track your incomes and expenses. You can choose the "
+"currency of transactions and also use app in two languages. All these "
+"features are wrapped in this easy-to-use online budget app."
+msgstr "S aplikací Rozpočet můžete sledovat své příjmy a výdaje. Můžete si také zvolit měnu, v jaké záznamy povedete. Můžete také používat aplikace ve dvou jazycích."
+
+#: .\templates\home.html:29
+msgid ""
+"Before you start using this app you have to create an account. Then you can "
+"create incomes or expenses and see them in charts on dashboard."
+msgstr "Pro využívání aplikace si musíte založit účet. Po založení účtu můžete vytvářet příjmy a výdaje a vidět je v přehledných grafech"
+
+#: .\templates\modals\newTransaction.html:8
+msgid "New Transaction"
+msgstr "Nová transakce"
+
+#: .\templates\modals\newTransaction.html:17
+msgid "Type"
+msgstr "Typ transakce"
+
+#: .\templates\modals\newTransaction.html:19
+msgid "Income"
+msgstr "Příjem"
+
+#: .\templates\modals\newTransaction.html:20
+msgid "Expense"
+msgstr "Výdaj"
+
+#: .\templates\modals\newTransaction.html:43
+msgid "Add"
+msgstr "Přidat"
+
+#: .\templates\partials\navbar.html:27
+msgid "Language"
+msgstr "Jazyk"
+
+#: .\templates\partials\navbar.html:40
+msgid "Sign out"
+msgstr "Odhlásit se"
+
+#~ msgid "Hello"
+#~ msgstr "Dobrý den"

@@ -1,0 +1,70 @@
+{% extends 'base.html'%}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="px-2 px-lg-5 px-md-5 mb-2">
+    <h1 class="mb-3 font-weight-bold">{% translate 'Transactions' %}</h1>
+    {% include 'partials/messages.html' %}
+    <div class="row p-3 overflow-auto">
+        <div class="col p-0">
+            <button class="btn btn-success rounded-lg shadow-sm" id="newTransBtn" data-toggle="modal" data-target="#newTransaction"><i class="fa fa-plus-circle"></i> {% translate 'Add Transaction' %}</button>
+            {% include 'modals/newTransaction.html'%}
+        </div>
+        <div class="form-row">
+            <div class="col">
+                <select name="month" class="form-control rounded-lg" style="width: auto;">
+                </select>
+            </div>
+            <div class="col">
+                <select name="year" class="form-control rounded-lg">
+                    {% for year in years %}
+                        <option value="{{year}}">{{year}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <button class="btn btn-primary rounded-lg" id="showBtn">{% translate 'Show' %}</button>
+        </div>
+    </div>
+    <div class="mb-3 p-3 bg-white overflow-auto rounded-lg shadow-sm border">
+        <table class="table table-borderless mb-0">
+            <thead class="border-bottom">
+                <tr>
+                    <th scope="col" class="p-3">{% translate 'Category' %}</th>
+                    <th scope="col" class="p-3">{% translate 'Date' %}</th>
+                    <th scope="col" class="p-3">{% translate 'Amount' %}</th>
+                    <th scope="col" class="p-3"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for transaction in transactions %}
+                <tr>
+                    <td>
+                        <i class="{{transaction.category.icon}} fa-xl pr-2 py-2"></i>
+                        <span class="font-weight-bold">{{transaction.category.name}}</span>
+                    </td>
+                    <td class="p-3">{{transaction.date}}</td>
+                    {% if transaction.type.pk == 1 %}
+                        <td class="text-success font-weight-bolder p-3 ">{{transaction.amount}} {{transaction.wallet.currency.symbol}}</td>
+                    {% else %}
+                        <td class="text-danger font-weight-bolder p-3">-{{transaction.amount}} {{transaction.wallet.currency.symbol}}</td>
+                    {% endif %}
+                    <td>
+                        <a href="{% url 'edit_transaction' transaction.transactionId %}" class="btn btn-outline-primary border-0 rounded-lg"><i class="fa fa-pen-to-square"></i></a>
+                        <a href="{% url 'del_transaction' transaction.transactionId %}" class="btn btn-outline-danger border-0 rounded-lg"><i class="fa fa-trash"></i></a>
+                    </td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="4" class="text-center font-weight-bold">
+                        {% translate 'You have no transactions in selected period' %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}
+
+

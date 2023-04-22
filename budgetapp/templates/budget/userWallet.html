@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<h1 class="mb-3 font-weight-bold">{% translate 'User account' %}</h1>
+{% include 'partials/messages.html' %}
+<div class="row">
+    <div class="col">
+        <div class="card rounded-lg mb-3 shadow-sm">
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-sm-3">
+                    <p class="mb-0">{% translate 'Username' %}</p>
+                    </div>
+                    <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{request.user.username}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                    <p class="mb-0">E-mail</p>
+                    </div>
+                    <div class="col-sm-9">
+                    <p class="text-muted mb-0">{{request.user.email}}</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-sm-3">
+                    <p class="mb-0">{% translate 'Account created' %}</p>
+                    </div>
+                    <div class="col-sm-9">
+                        <p class="text-muted mb-0">{{request.user.date_joined | date:'d N Y'}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="card rounded-lg mb-3 shadow-sm">
+            <div class="card-body">
+                <form action="{% url 'account'%}" method="post" class="mb-0">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="currency">{% translate 'Currency' %}</label>
+                        <select name="currency" class="form-control rounded-sm">
+                            {% for currency in currencies %}
+                                {% if wallet.currency.code == currency.code %}
+                                    <option selected value="{{currency.code}}">{{currency.name}} ({{currency.code}})</option>
+                                {% else %}
+                                    <option value="{{currency.code}}">{{currency.name}} ({{currency.code}})</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit" id="submitBtn" value="{% translate 'Save' %}" class="btn btn-primary rounded-sm">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

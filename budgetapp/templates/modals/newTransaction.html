@@ -1,0 +1,50 @@
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="modal fade" id="newTransaction" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content rounded-lg">
+        <div class="modal-header">
+          <h5 class="modal-title font-weight-bold">{% translate 'New Transaction' %}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form action="{% url 'transaction' %}" method="post">
+          {% csrf_token %}
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="type" class="font-weight-bolder">{% translate 'Type' %}</label>
+              <select name="type" class="form-control rounded-sm">
+                    <option value="1">{% translate 'Income' %}</option>
+                    <option value="2">{% translate 'Expense' %}</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="category" class="font-weight-bolder">{% translate 'Category' %}</label>
+                <select name="category" class="form-control rounded-sm" id="newCategory">
+                      
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="date" class="font-weight-bolder">{% translate 'Date' %}</label>
+                <input name="date" type="date" value="2023-04-05" class="form-control rounded-sm" required>
+            </div>
+            <div class="form-group">
+                <label for="amount" class="font-weight-bolder">{% translate 'Amount' %}</label>
+                <input type="number" step=".01" min="0" name="amount" class="form-control rounded-sm" required>
+            </div>
+            <div class="form-group">
+              <label for="description" class="font-weight-bolder">{% translate 'Description' %}</label>
+              <textarea name="description" cols="30" rows="1" class="form-control rounded-sm"></textarea>
+          </div>
+          </div>
+          <div class="modal-footer">
+              <input type="submit" id="submitBtn" class="btn btn-primary btn-block rounded-sm" value="{% translate 'Add' %}">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

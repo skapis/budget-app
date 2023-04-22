@@ -1,0 +1,40 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+{% load i18n %}
+{% block content %}
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <div class="card mt-5 rounded-lg shadow-sm">
+            <div class="card-body">
+                <div class="card-title py-3 mb-0 text-center">
+                    <h4><strong>{% translate 'Login to your account' %}</strong></h4>
+                </div>
+                <form action="{% url 'login' %}", method="post">
+                    {% csrf_token %}
+                    {% include 'partials/messages.html' %}
+                    <div class="form-group">
+                        <label for="username" class="font-weight-bolder">{% translate 'Username' %}</label>
+                        <input type="text" name="username" id="usernameField" value="{{fieldValues.username}}" class="form-control form-control-sm rounded-sm"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="font-weight-bolder">{% translate 'Password' %}</label>
+                        <input type="password" name="password" id="passwordField" class="form-control form-control-sm rounded-sm"/>
+                        <i class="far fa-eye showPasswordToggle float-right py-3"></i>
+                    </div>
+                    <input type="submit" value="{% translate 'Login' %}" id="submitBtn" class="btn btn-block btn-primary submit-btn rounded-sm"/>
+                </form>
+            
+                <div class="container text-center">
+                    <span>{% translate "Don't have an account?" %} </span><a href="{% url 'register' %}">{% translate 'Sign up' %}</a><br>
+                    <a href="{% url 'request-password' %}">{% translate 'Forget Password?' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+<script src="{% static 'js/login.js' %}"></script>
+
+{% endblock content %}
