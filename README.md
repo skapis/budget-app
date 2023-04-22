@@ -2,7 +2,7 @@
 In this directory is simple Budget App, which is created in Django Framework. For frontend is used Bootstrap 4. App is multilanguage, current languages are Czech and English.
 The main purpose of this app is to track user expenses and incomes. User can also change the currency of his transactions, but there is no currency converter, so if currency is changed the amount of transactions remain in old currency.
 
-To use this app you have to setup email client and install all required packages.
+To use this app you have to setup email client and install all required packages. Unit tests and selenium tests are also included.
 
 ## Home page
 On home page of app is basic description and links to Sign In or Sign Up. User can also switch language by click on country flag. If the user switch language then he login or create account in selected language.
