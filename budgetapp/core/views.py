@@ -142,7 +142,7 @@ def edit_transaction(request, transaction_id):
 
         if typ and category and date and amount:
             if typ.pk == category.type.pk:
-                trans.typ = typ
+                trans.type = typ
                 trans.category = category
                 trans.date = date
                 trans.amount = amount
